@@ -91,6 +91,7 @@ class AdminPanelProvider extends PanelProvider
                 TwoFactorAuthenticationPlugin::make()
                     ->addTwoFactorMenuItem(true, "2FA Settings", "heroicon-s-lock-closed"),
             ])
+            ->authGuard('web')
             ->authMiddleware([
                 Authenticate::class,
                 Locker::class,
