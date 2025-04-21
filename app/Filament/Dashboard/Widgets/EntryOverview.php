@@ -172,14 +172,6 @@ class EntryOverview extends BaseWidget
                     ->form(fn () => $this->getFormSchema()),
                 Tables\Actions\EditAction::make()
                     ->form(fn () => $this->getFormSchema()),
-                Tables\Actions\DeleteAction::make(),
-                Tables\Actions\RestoreAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                    Tables\Actions\RestoreBulkAction::make(),
-                ]),
             ]);
     }
 }
