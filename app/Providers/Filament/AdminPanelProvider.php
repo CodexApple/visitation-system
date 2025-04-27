@@ -106,6 +106,13 @@ class AdminPanelProvider extends PanelProvider
             ->renderHook(
                 PanelsRenderHook::SIDEBAR_NAV_START,
                 fn (): string => Blade::render('<livewire:chat-shortcut wire:poll.1s />'),
-            );
+            )
+            ->spa()
+            ->spaUrlExceptions(fn (): array => [
+                url('/admin'),
+                url('/dashboard'),
+                ActivityResource::getUrl(),
+                EntryResource::getUrl(),
+            ]);
     }
 }

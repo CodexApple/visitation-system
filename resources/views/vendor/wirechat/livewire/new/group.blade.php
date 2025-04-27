@@ -5,7 +5,7 @@
         class="relative w-full h-[410px] border  items-center justify-center dark:border-gray-700 overflow-auto bg-white dark:bg-gray-800 dark:text-white sm:max-w-lg sm:rounded-lg">
 
         {{--  Group Details --}}
-        <section x-show="$wire.showAddMembers==false"
+        <section x-show="$wire.showAddMembers==false" 
             x-transition:enter="ease-out duration-300"
             x-transition:enter-start="opacity-0 -translate-x-full" x-transition:enter-end="opacity-100 translate-x-0"
             x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-x-0"
@@ -124,7 +124,7 @@
 
                     <h3 class="text-sm mx-auto font-semibold "><span>@lang('wirechat::new.group.labels.add_members')</span> {{count($selectedMembers)}} / {{$maxGroupMembers}}</h3>
 
-                    <button
+                    <button 
                         wire:click="create"
                         wire:loading.attr="disabled"
                         wire:target='create'

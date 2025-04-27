@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" >
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="image" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <title>{{ $title ?? config('app.name', 'Laravel') }} - PCS</title>
 
-    <!-- JavaScript to prevent flickering -->
-    <script>
+      <!-- JavaScript to prevent flickering -->
+      <script>
         // Function to apply or remove the dark theme
         function updateTheme(isDark) {
             if (isDark) {
@@ -27,7 +27,7 @@
         darkModeMediaQuery.addEventListener('change', (event) => {
             updateTheme(event.matches);
         });
-    </script>
+      </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -41,7 +41,7 @@
     @wirechatStyles
 </head>
 
-<body x-data x-cloak class="font-sans antialiased">
+<body  x-data x-cloak class="font-sans antialiased">
     <div class="min-h-screen bg-white dark:bg-gray-900">
 
         <!-- Page Content -->
@@ -54,10 +54,10 @@
     @livewireScripts
     @wirechatAssets
     <script>
-        document.addEventListener('livewire:navigated', () => {
-            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-            updateTheme(darkModeMediaQuery.matches); // Re-apply the theme based on system preference
-        });
+      document.addEventListener('livewire:navigated', () => {
+          const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+          updateTheme(darkModeMediaQuery.matches);  // Re-apply the theme based on system preference
+      });
     </script>
 
 </body>

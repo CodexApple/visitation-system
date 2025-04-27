@@ -18,6 +18,7 @@
         "malzariey/filament-daterangepicker-filter": "^3.3",
         "marjose123/filament-lockscreen": "^2.6",
         "namu/wirechat": "^0.2.5",
+        "spatie/browsershot": "^5.0",
         "stephenjude/filament-two-factor-authentication": "^0.0.23",
         "tomatophp/filament-logger": "^1.0"
     },
