@@ -150,6 +150,18 @@ VITE_REVERB_HOST="${REVERB_HOST}"
 VITE_REVERB_PORT="${REVERB_PORT}"
 VITE_REVERB_SCHEME="${REVERB_SCHEME}"
 ```
+### Running the entire deployment variable
+```console
+php artisan migrate
+php artisan reverb:start
+```
 
+### For caching issues perform the following
+```console
+php artisan optimize:clear
+npm run build
+
+php artisan optimize
+```
 ## Other Changes
 Please check your **.env** file it will be missing during the installation process this is because it contains various secret information only **YOU** should know.
